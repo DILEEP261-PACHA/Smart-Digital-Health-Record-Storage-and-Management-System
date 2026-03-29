@@ -1,0 +1,19 @@
+digraph "Use Case Diagram" {
+	size=8
+	Admin [shape=actor]
+	"Hospital/Diagnostic Center" [shape=actor]
+	Patient [shape=actor]
+	UC1 [label="Add Hospital/Diagnostic Center" shape=ellipse]
+	UC2 [label="Upload Medical Records" shape=ellipse]
+	UC3 [label="View Medical Records" shape=ellipse]
+	UC4 [label="Approve Access via OTP" shape=ellipse]
+	UC5 [label="Locate Nearby Hospitals" shape=ellipse]
+	UC6 [label="Disease Analysis" shape=ellipse]
+	Admin -> UC1
+	"Hospital/Diagnostic Center" -> UC2
+	"Hospital/Diagnostic Center" -> UC3 [label="(With OTP)"]
+	Patient -> UC3
+	Patient -> UC4
+	Patient -> UC5
+	Admin -> UC6
+}
